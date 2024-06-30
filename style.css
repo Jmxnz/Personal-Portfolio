@@ -1,0 +1,592 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+
+    background-color: whitesmoke;
+}
+
+:root {
+    --first: #402E7A;
+    --second: #4C3BCF;
+    --third: #4B70F5;
+    --fourth: #3DC2EC;
+    --fifth: #222222;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--first);
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 60px;
+}
+
+.nav-logo h1 {
+    color: #fff;
+    font-size: 25px;
+}
+
+.nav-logo span {
+    color: salmon;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 400;
+
+    transition: all .5s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: skyblue;
+}
+
+.menu {
+    display: none;
+}
+
+.menu div {
+    background: whitesmoke;
+    width: 20px;
+    height: 2px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.change .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.change .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.change .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Section Pages */
+section {
+    padding: 70px 15%;
+}
+
+/* Home */
+.home {
+    height: 70vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-text span {
+    color: salmon;
+}
+
+.home-text h3 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.home-text h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+.home-text h1::first-letter {
+    font-size: 50px;
+}
+
+.home-text p {
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.home-text a {
+    text-decoration: none;
+    color: #222;
+    margin-top: 5px;
+}
+
+.home-img img {
+    border-radius: 50%;
+    cursor: pointer;
+    animation: bounce 1s infinite alternate;
+    width: 350px;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(5px);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
+
+.home-icon {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home-icon a {
+    text-decoration: none;
+}
+
+.home-icon i {
+    font-size: 18px;
+    cursor: pointer;
+
+    transition: all .5s ease;
+}
+
+.home-icon i:hover {
+    color: salmon;
+}
+
+/* About */
+.about h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.about h1::first-letter {
+    font-size: 45px;
+}
+
+.about span {
+    color: salmon;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-img img {
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+}
+
+.about-img {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+
+    cursor: pointer;
+}
+
+.about-text p {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.about-text p::first-letter {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.about-cv a {
+    text-decoration: none;
+    color: #222;
+    padding: 8px 16px;
+    border-radius: 5px;
+
+    transition: .5s ease;
+}
+
+.about-cv a:hover {
+    border: none;
+    background-color: salmon;
+}
+
+/* Projects */
+.projects h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.projects h1::first-letter {
+    font-size: 45px;
+}
+
+.projects span {
+    color: salmon;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+    gap: 50px;
+}
+
+.projects-card {
+    background-color: #F8F4E1;
+    padding: 10px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.projects-card:hover {
+    transform: scale(0.9);
+}
+
+.projects-card img {
+    margin-bottom: 0;
+    height: 200px;
+}
+
+.projects-card p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+.projects-card a {
+    text-decoration: none;
+    color: #222;
+    font-size: 13px;
+
+    transition: all .5s ease;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.projects-card a:hover {
+    background-color: salmon;
+}
+
+/* Skills */
+.skills h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.skills h1::first-letter {
+    font-size: 45px;
+}
+
+.skills span {
+    color: salmon;
+}
+
+.skills-icon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center;
+    gap: 50px;
+}
+
+.skill img {
+    width: 150px;
+    height: auto;
+
+    cursor: pointer;
+}
+
+/* Contact */
+.contact h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.contact h1::first-letter {
+    font-size: 45px;
+}
+
+.contact span {
+    color: salmon;
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    margin-bottom: 50px;
+}
+
+.contact-title h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.contact-input input[type="email"],
+.contact-input input[type="password"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #222;
+    margin: 10px;
+    width: 250px;
+    outline: none;
+}
+
+.contact-input textarea {
+    padding: 8px;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    border: 1px solid #222;
+    outline: none;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    background-color: salmon;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    padding: 5px;
+}
+
+.footer p {
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+/* mobile view */
+@media screen and (max-width: 425px) {
+    /* Navigation */
+    .nav-logo h1 {
+        font-size: 15px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #nav.active {
+        position: fixed;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        background-color: var(--second);
+        padding: 5px;
+        text-align: center;
+        overflow-x: hidden;
+
+        display: block;
+    }
+
+    nav li {
+        margin: 20px 0;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    /* Section */
+    section {
+        padding: 90px 13%;
+    }
+
+    /* Home */
+    .home {
+        flex-direction: column-reverse  ;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 250px;
+        margin-bottom: 30px;
+    }
+    
+    .home-text h3 {
+        font-size: 12px;
+    }
+
+    .home-text h1 {
+        font-size: 20px;
+    }
+
+    .home-text h1::first-letter {
+        font-size: 25px;
+    }
+
+    .home-text p {
+        font-size: 11px;
+    }
+
+    .home-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-icon i {
+        font-size: 15px;
+    }
+
+    /* About */
+    .about h1 {
+        font-size: 20px;
+    }
+
+    .about h1::first-letter {
+        font-size: 25px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 250px;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .about-text p {
+        font-size: 12px;
+    }
+
+    .about-text p::first-letter {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    /* Projects */
+    .projects h1 {
+        font-size: 20px;
+    }
+
+    .projects h1::first-letter {
+        font-size: 25px;
+    }
+
+    .projects-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .projects-card img {
+        height: 150px;
+    }
+
+    .projects-card p {
+        font-size: 12px;
+    }
+
+    .projects-card a {
+        font-size: 12px;
+    }
+
+    /* Skills */
+    .skills h1 {
+        font-size: 20px;
+    }
+
+    .skills h1::first-letter {
+        font-size: 25px;
+    }
+
+    .skills-icon {
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        row-gap: 20px;
+    }
+
+    .skill img {
+        width: 200px;
+        height: auto;
+    }
+
+    /* Contact */
+    .contact h1 {
+        font-size: 20px;
+    }
+
+    .contact h1::first-letter {
+        font-size: 25px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        margin-top: 15px;
+    }
+
+    .contact-form p {
+        font-size: 12px;
+    }
+
+    .contact-title h3 {
+        font-size: 18px;
+    }
+
+    .contact-input input[type="email"],
+    .contact-input input[type="password"] {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .contact-input textarea {
+        width: calc(100% - 40px);
+        margin-top: 10px;
+    }
+
+    .btn {
+        margin-top: 10px;
+    }
+}
